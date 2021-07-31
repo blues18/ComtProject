@@ -4,79 +4,198 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/S1001"
-        android:layout_width="147dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="4dp"
-        android:onClick="handleSelection"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159"
-        app:srcCompat="@drawable/billie_jean_daniela" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="201dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Song 2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
-
-    <ImageButton
-        android:id="@+id/S1003"
-        android:layout_width="151dp"
-        android:layout_height="137dp"
-        android:layout_marginEnd="256dp"
-        android:layout_marginBottom="48dp"
-        android:onClick="handleSelection"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/roar" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="210dp"
-        android:layout_height="63dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Song 3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="song 1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toEndOf="@+id/S1001"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="32dp"
+        android:text="Home "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/S1002"
-        android:layout_width="150dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="256dp"
-        android:onClick="handleSelection"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="388dp"
+        android:text="New Uploads"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal1"
+        android:layout_width="405dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/home" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/S1003"
+                android:layout_width="115dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/roar" />
+
+            <ImageButton
+                android:id="@+id/S1001"
+                android:layout_width="118dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="20dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@id/S1003"
+                app:layout_constraintTop_toTopOf="@id/S1003"
+                app:srcCompat="@drawable/billie_jean_daniela" />
+
+            <ImageButton
+                android:id="@+id/S1002"
+                android:layout_width="109dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="24dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@id/S1001"
+                app:layout_constraintTop_toTopOf="@id/S1001"
+                app:srcCompat="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/S1005"
+                android:layout_width="109dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/michael_buble_collection"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@id/S1002"
+                app:layout_constraintTop_toTopOf="@id/S1002"
+                app:srcCompat="@drawable/home" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="200dp"
+        android:text="recently played Song"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal2"
+        android:layout_width="520dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="204dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/S1004"
+                android:layout_width="121dp"
+                android:layout_height="102dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/blackpink" />
+
+            <ImageButton
+                android:id="@+id/S1006"
+                android:layout_width="123dp"
+                android:layout_height="102dp"
+                android:layout_marginStart="24dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@+id/S1004"
+                app:layout_constraintTop_toTopOf="@+id/S1004"
+                app:srcCompat="@drawable/photograph" />
+
+            <ImageButton
+                android:id="@+id/S1007"
+                android:layout_width="113dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="20dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@id/S1006"
+                app:layout_constraintTop_toTopOf="@id/S1006"
+                app:srcCompat="@drawable/wonder_wall" />
+
+            <ImageButton
+                android:id="@+id/S1008"
+                android:layout_width="113dp"
+                android:layout_height="107dp"
+                android:layout_marginStart="16dp"
+                android:onClick="handleSelection"
+                app:layout_constraintStart_toEndOf="@id/S1007"
+                app:layout_constraintTop_toTopOf="@id/S1007"
+                app:srcCompat="@drawable/blackpink" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/Shuffle_home"
+        android:layout_width="66dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/shuffle_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Category2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KPOP"
+        app:layout_constraintEnd_toStartOf="@+id/Category3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Category1"
+        app:layout_constraintTop_toTopOf="@+id/Category1" />
+
+    <Button
+        android:id="@+id/Category1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="JPOP"
+        app:layout_constraintEnd_toStartOf="@+id/Category2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Category3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROCK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Category2"
+        app:layout_constraintTop_toTopOf="@+id/Category2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

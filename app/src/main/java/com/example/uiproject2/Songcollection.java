@@ -1,7 +1,10 @@
 package com.example.uiproject2;
 
+import java.util.List;
+
 public class Songcollection {
-    private Songcode song[] = new Songcode[3];
+    private Songcode song[] = new Songcode[4];
+    private Category_Swap Category[] = new Category_Swap[6];
 
     public Songcollection() {
 
@@ -23,42 +26,60 @@ public class Songcollection {
                 "https://p.scdn.co/mp3-preview/edf24f427483d886b640c5ed9944f9291e0976fc?cid=2afe87a64b0042dabf51f37318616965",
                 0.30,
                 R.drawable.roar);
+        Songcode forth_song = new Songcode("S1004",
+                "Boombayah",
+                "Blackpink",
+                "https://p.scdn.co/mp3-preview/e99786dd73e91ef36ec7ff551352a63d5af0e80f?cid=2afe87a64b0042dabf51f37318616965",
+                0.30,
+                R.drawable.blackpink);
 
 
         song[0] = first_song;
         song[1] = Second_song;
         song[2] = thrid_song;
+        song[3] = forth_song;
+
+        Category_Swap first_Category = new Category_Swap("Category1","Jpop");
+        Category_Swap Second_Category = new Category_Swap("Category2","Kpop");
+        Category_Swap Thrid_Category = new Category_Swap("Category3","Rock");
+        Category_Swap Forth_Category = new Category_Swap("Category4","Chinese");
+
+
+
 
     }
+
 
     public Songcode getCurrentSong(int currentSongId) {
 
         return song[currentSongId];
 
     }
+
     public int Search_Song_By_Id(String id) {
 
-        for(int index=0; index < song.length; index++){
+        for (int index = 0; index < song.length; index++) {
             Songcode tempSongs = song[index];
             if (tempSongs.getId().equals(id)) {
                 return index;
             }
         }
-        return  -1;
+        return -1;
     }
-    public int getNextSong(int currentSongIndex){
-        if (currentSongIndex >= song.length-1){
+
+    public int getNextSong(int currentSongIndex) {
+        if (currentSongIndex >= song.length - 1) {
             return currentSongIndex;
-        }
-        else{
-            return currentSongIndex +1;
-        }
-    }public int getPrevSong (int currentSongIndex){
-        if (currentSongIndex <= 0){
-            return currentSongIndex;
-        }else{
-            return currentSongIndex-1;
+        } else {
+            return currentSongIndex + 1;
         }
     }
 
+    public int getPrevSong(int currentSongIndex) {
+        if (currentSongIndex <= 0) {
+            return currentSongIndex;
+        } else {
+            return currentSongIndex - 1;
+        }
+    }
 }

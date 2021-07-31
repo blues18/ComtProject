@@ -23,4 +23,7 @@ public class Songcode {
     public String getFileLink() {return fileLink;}
     public double getSongLength() {return songLength;}
     public int getDrawable() {return drawable;}
+
+
 }
+
