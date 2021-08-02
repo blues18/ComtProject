@@ -3,8 +3,8 @@ package com.example.uiproject2;
 import java.util.List;
 
 public class Songcollection {
-    private Songcode song[] = new Songcode[4];
-    private Category_Swap Category[] = new Category_Swap[6];
+    public Songcode songs[] = new Songcode[4];
+    //private Category_Swap Category[] = new Category_Swap[6];
 
     public Songcollection() {
 
@@ -34,17 +34,15 @@ public class Songcollection {
                 R.drawable.blackpink);
 
 
-        song[0] = first_song;
-        song[1] = Second_song;
-        song[2] = thrid_song;
-        song[3] = forth_song;
+        songs[0] = first_song;
+        songs[1] = Second_song;
+        songs[2] = thrid_song;
+        songs[3] = forth_song;
 
-        Category_Swap first_Category = new Category_Swap("Category1","Jpop");
-        Category_Swap Second_Category = new Category_Swap("Category2","Kpop");
-        Category_Swap Thrid_Category = new Category_Swap("Category3","Rock");
-        Category_Swap Forth_Category = new Category_Swap("Category4","Chinese");
-
-
+        //Category_Swap first_Category = new Category_Swap("Category1","Jpop");
+        //Category_Swap Second_Category = new Category_Swap("Category2","Kpop");
+        //Category_Swap Thrid_Category = new Category_Swap("Category3","Rock");
+        //Category_Swap Forth_Category = new Category_Swap("Category4","Chinese");
 
 
     }
@@ -52,14 +50,14 @@ public class Songcollection {
 
     public Songcode getCurrentSong(int currentSongId) {
 
-        return song[currentSongId];
+        return songs[currentSongId];
 
     }
 
     public int Search_Song_By_Id(String id) {
 
-        for (int index = 0; index < song.length; index++) {
-            Songcode tempSongs = song[index];
+        for (int index = 0; index < songs.length; index++) {
+            Songcode tempSongs = songs[index];
             if (tempSongs.getId().equals(id)) {
                 return index;
             }
@@ -68,7 +66,7 @@ public class Songcollection {
     }
 
     public int getNextSong(int currentSongIndex) {
-        if (currentSongIndex >= song.length - 1) {
+        if (currentSongIndex >= songs.length - 1) {
             return currentSongIndex;
         } else {
             return currentSongIndex + 1;

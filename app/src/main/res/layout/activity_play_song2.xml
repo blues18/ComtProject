@@ -126,6 +126,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="340dp"
         android:background="@drawable/shuffle_off"
+        android:onClick="ShuffleSong"
         android:textColor="#000000"
         app:iconTint="#874545"
         app:layout_constraintStart_toStartOf="parent"

@@ -33,15 +33,15 @@ public class PlaySongActivity2<repeatBtn> extends AppCompatActivity {
     private Songcollection songcollection = new Songcollection();
     private Songcollection originalSongcollection = new Songcollection();
 
-    //List<Songcode> shufflelist = Arrays.asList(songcollection.);
+    List<Songcode> shuffleList= Arrays.asList(songcollection.songs);
 
     SeekBar seekBar;
     Handler handler= new Handler();
     Button RepeatBtn;
     boolean RepeatFlag = false;
 
-    //Button shuffle_btn;
-    //boolean shuffleFlag = false;
+    Button shuffle_btn;
+    boolean shuffleFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class PlaySongActivity2<repeatBtn> extends AppCompatActivity {
             }
         });
         RepeatBtn = findViewById(R.id.RepeatSong);
-        //shuffle_btn = findViewById(R.id.shuffle_btn);
+        shuffle_btn = findViewById(R.id.shuffle_btn);
     }
 
     Runnable p_bar = new Runnable(){    //first impelment
@@ -181,13 +181,14 @@ public class PlaySongActivity2<repeatBtn> extends AppCompatActivity {
         } RepeatFlag = !RepeatFlag;
     }
 
-    //public void ShuffleSong(View view) {  //third impelmented
-        //if (shuffleFlag) {
-            //shuffle_btn.setBackgroundResource(R.drawable.shuffle_off);
-        //}else{
-            //shuffle_btn.setBackgroundResource(R.drawable.shuffle_on);
-            //Collections.shuffle(shuffleList);
-            //shuffleList.toArray(songcollection.getCurrentSong(3,));
-        //} shuffleFlag = !shuffleFlag;
-   //}
+    public void ShuffleSong(View view) {  //third impelmented
+        if (shuffleFlag) {
+            shuffle_btn.setBackgroundResource(R.drawable.shuffle_off);
+            songcollection = new Songcollection();
+        }else{
+            shuffle_btn.setBackgroundResource(R.drawable.shuffle_on);
+            Collections.shuffle(shuffleList);
+            shuffleList.toArray(songcollection.songs);
+        } shuffleFlag = !shuffleFlag;
+   }
 }
