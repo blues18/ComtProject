@@ -9,11 +9,11 @@
 
     <Button
         android:id="@+id/prevbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="99dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="48dp"
+        android:background="@android:drawable/ic_media_previous"
         android:onClick="playPrevious"
-        android:text="prev"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Playbutton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -21,10 +21,10 @@
 
     <Button
         android:id="@+id/nextbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="98dp"
+        android:layout_height="58dp"
+        android:background="@android:drawable/ic_media_next"
         android:onClick="playNext"
-        android:text="Next"
         app:layout_constraintBottom_toBottomOf="@+id/Playbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,10 +33,10 @@
 
     <Button
         android:id="@+id/Playbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="87dp"
+        android:layout_height="60dp"
+        android:background="@android:drawable/ic_media_play"
         android:onClick="playOrPauseMusic"
-        android:text="Play"
         app:layout_constraintBottom_toBottomOf="@+id/prevbutton"
         app:layout_constraintEnd_toStartOf="@+id/nextbutton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -45,10 +45,10 @@
 
     <TextView
         android:id="@+id/txtsongtitles"
-        android:layout_width="128dp"
-        android:layout_height="47dp"
+        android:layout_width="158dp"
+        android:layout_height="42dp"
         android:layout_marginTop="332dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginEnd="128dp"
         android:background="#FFFCFC"
         android:backgroundTint="#FFFFFF"
         android:text="Song titles"
@@ -58,10 +58,10 @@
 
     <TextView
         android:id="@+id/txtartist"
-        android:layout_width="128dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="376dp"
-        android:layout_marginEnd="156dp"
+        android:layout_width="142dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="144dp"
         android:text="Artists "
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,14 +80,13 @@
 
     <TextView
         android:id="@+id/txtdurations"
-        android:layout_width="125dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="160dp"
+        android:layout_width="59dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="24dp"
         android:text="Durations"
-        android:textSize="24sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtartist" />
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <ImageView
         android:id="@+id/txtcoverimage"
@@ -102,7 +101,7 @@
         android:id="@+id/seekBar"
         android:layout_width="361dp"
         android:layout_height="26dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="452dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -131,5 +130,13 @@
         app:iconTint="#874545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

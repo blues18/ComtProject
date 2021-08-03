@@ -1,7 +1,7 @@
 package com.example.uiproject2;
 
 public class Songcode {
-    private String id;
+    public String id;
     private String titles;
     private String artiste;
     private String fileLink;

@@ -1,33 +1,34 @@
 package com.example.uiproject2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Songcollection {
     public Songcode songs[] = new Songcode[4];
-    //private Category_Swap Category[] = new Category_Swap[6];
+    //public Category_Swap Category[] = new Category_Swap[6];
 
     public Songcollection() {
 
         Songcode first_song = new Songcode("S1001",
-                "come to light",
+                "come to light (1)",
                 "Jeff Williams",
                 "https://p.scdn.co/mp3-preview/a2f1808b814516d0778d1bf41bcd542fa6379135?cid=2afe87a64b0042dabf51f37318616965",
                 0.30,
                 R.drawable.billie_jean_daniela);
         Songcode Second_song = new Songcode("S1002",
-                "Top japanese version",
+                "Top japanese version(2)",
                 "Stray kids",
                 "https://p.scdn.co/mp3-preview/d570f1ee586944205307317d5a6d330e221637dd?cid=2afe87a64b0042dabf51f37318616965",
                 3.13,
                 R.drawable.home);
         Songcode thrid_song = new Songcode("S1003",
-                "Bts Butter",
+                "Bts Butter(3)",
                 "Bts",
                 "https://p.scdn.co/mp3-preview/edf24f427483d886b640c5ed9944f9291e0976fc?cid=2afe87a64b0042dabf51f37318616965",
                 0.30,
                 R.drawable.roar);
         Songcode forth_song = new Songcode("S1004",
-                "Boombayah",
+                "Boombayah(4)",
                 "Blackpink",
                 "https://p.scdn.co/mp3-preview/e99786dd73e91ef36ec7ff551352a63d5af0e80f?cid=2afe87a64b0042dabf51f37318616965",
                 0.30,
@@ -52,6 +53,14 @@ public class Songcollection {
 
         return songs[currentSongId];
 
+    }
+    public Songcode SearchById(String Id){
+        for (int song = 0; song < songs.length; song++) {
+            Songcode tempSong = songs[song];
+            if (tempSong.getId().equals(Id)){return tempSong; }
+
+        }
+        return null;
     }
 
     public int Search_Song_By_Id(String id) {
@@ -81,3 +90,4 @@ public class Songcollection {
         }
     }
 }
+

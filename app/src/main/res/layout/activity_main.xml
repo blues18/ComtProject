@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="444dp"
         android:text="New Uploads"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,11 +31,10 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontal1"
-        android:layout_width="405dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="413dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -48,7 +47,7 @@
                 android:layout_width="115dp"
                 android:layout_height="103dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:onClick="handleSelection"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -85,6 +84,51 @@
                 app:layout_constraintTop_toTopOf="@id/S1002"
                 app:srcCompat="@drawable/home" />
 
+            <Button
+                android:id="@+id/add1"
+                android:layout_width="56dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1001"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toStartOf="@+id/S1003"
+                app:layout_constraintTop_toBottomOf="@+id/S1003" />
+
+            <Button
+                android:id="@+id/add2"
+                android:layout_width="56dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="84dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1002"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toEndOf="@+id/add1"
+                app:layout_constraintTop_toTopOf="@+id/add1" />
+
+            <Button
+                android:id="@+id/add3"
+                android:layout_width="56dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="76dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1003"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toEndOf="@+id/add2"
+                app:layout_constraintTop_toTopOf="@+id/add2" />
+
+            <Button
+                android:id="@+id/add4"
+                android:layout_width="56dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="76dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1004"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toEndOf="@+id/add3"
+                app:layout_constraintTop_toTopOf="@+id/add3" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
@@ -103,7 +147,7 @@
         android:id="@+id/horizontal2"
         android:layout_width="520dp"
         android:layout_height="127dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="244dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +206,7 @@
         android:layout_width="66dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/shuffle_off"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -197,5 +241,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Category2"
         app:layout_constraintTop_toTopOf="@+id/Category2" />
+
+    <Button
+        android:id="@+id/Viewing_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="gotoFavouriteActivity"
+        android:text="View_playlist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

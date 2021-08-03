@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Songcollection Songcollection = new Songcollection();
+    static ArrayList<Songcode> favlist = new ArrayList<Songcode>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +32,17 @@ public class MainActivity extends AppCompatActivity {
         sendDataToActivity(currentArrayIndex);
 
     }
+    public void Add_to_favourite(View view) {
 
+        String songID = view.getContentDescription().toString();
+        Songcode songcode = Songcollection.SearchById(songID);
+        favlist.add(songcode);
+        //Toast.makeText(this, "button isentered", Toast.LENGTH_SHORT).show();
+    }
+
+    public void gotoFavouriteActivity(View view) {
+        Intent intent = new Intent(this, favourite_activity.class);
+        startActivity(intent);
+
+    }
 }
