@@ -35,6 +35,7 @@
         android:layout_height="192dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -86,9 +87,9 @@
 
             <Button
                 android:id="@+id/add1"
-                android:layout_width="56dp"
-                android:layout_height="49dp"
-                android:layout_marginStart="32dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="68dp"
                 android:layout_marginTop="4dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1001"
@@ -98,8 +99,8 @@
 
             <Button
                 android:id="@+id/add2"
-                android:layout_width="56dp"
-                android:layout_height="49dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="84dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1002"
@@ -109,8 +110,8 @@
 
             <Button
                 android:id="@+id/add3"
-                android:layout_width="56dp"
-                android:layout_height="49dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="76dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1003"
@@ -120,8 +121,8 @@
 
             <Button
                 android:id="@+id/add4"
-                android:layout_width="56dp"
-                android:layout_height="49dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
                 android:layout_marginStart="76dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1004"
@@ -137,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="132dp"
         android:text="recently played Song"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +148,7 @@
         android:id="@+id/horizontal2"
         android:layout_width="520dp"
         android:layout_height="127dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="312dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +207,7 @@
         android:layout_width="66dp"
         android:layout_height="50dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/shuffle_off"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -225,7 +226,7 @@
         android:id="@+id/Category1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="84dp"
         android:text="JPOP"
         app:layout_constraintEnd_toStartOf="@+id/Category2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -246,8 +247,8 @@
         android:id="@+id/Viewing_playlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="16dp"
         android:onClick="gotoFavouriteActivity"
         android:text="View_playlist"
         app:layout_constraintBottom_toBottomOf="parent"

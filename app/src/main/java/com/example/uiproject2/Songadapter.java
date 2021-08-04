@@ -37,6 +37,13 @@ public class Songadapter extends RecyclerView.Adapter<Myview> {
         txtsong.setText(songcode.getTitles());
         int imageId = songcode.getDrawable();
         holder.cover.setImageResource(imageId);
+        holder.removed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.favlist.remove(position);
+                notifyDataSetChanged();
+            }
+        });
     }
 
     @Override

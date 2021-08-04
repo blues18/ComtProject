@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class favourite_activity extends AppCompatActivity {
     RecyclerView favList;
@@ -21,4 +22,9 @@ public class favourite_activity extends AppCompatActivity {
         favList.setAdapter(songAdapter);
         favList.setLayoutManager(new LinearLayoutManager(this));
         }
+
+    public void remove_all(View view) {
+        MainActivity.favlist.clear();
+        songAdapter.notifyDataSetChanged();
     }
+}
