@@ -2,7 +2,7 @@ package com.example.uiproject2;
 
 public class Songcode {
     public String id;
-    private String titles;
+    public String titles;
     private String artiste;
     private String fileLink;
     private double songLength;

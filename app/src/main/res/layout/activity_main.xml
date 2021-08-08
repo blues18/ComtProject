@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#198F87"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_marginStart="168dp"
         android:layout_marginTop="32dp"
         android:text="Home "
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,8 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="392dp"
         android:text="New Uploads"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,9 +35,9 @@
         android:id="@+id/horizontal1"
         android:layout_width="413dp"
         android:layout_height="192dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -75,22 +77,20 @@
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
-                android:id="@+id/S1005"
                 android:layout_width="109dp"
                 android:layout_height="99dp"
                 android:layout_marginStart="20dp"
                 android:background="@drawable/michael_buble_collection"
-                android:onClick="handleSelection"
                 app:layout_constraintStart_toEndOf="@id/S1002"
                 app:layout_constraintTop_toTopOf="@id/S1002"
                 app:srcCompat="@drawable/home" />
 
             <Button
                 android:id="@+id/add1"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="68dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="38dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1001"
                 android:onClick="Add_to_favourite"
@@ -99,9 +99,9 @@
 
             <Button
                 android:id="@+id/add2"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="84dp"
+                android:layout_width="38dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="108dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1002"
                 android:onClick="Add_to_favourite"
@@ -110,9 +110,9 @@
 
             <Button
                 android:id="@+id/add3"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="76dp"
+                android:layout_width="38dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="100dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1003"
                 android:onClick="Add_to_favourite"
@@ -121,14 +121,51 @@
 
             <Button
                 android:id="@+id/add4"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="76dp"
+                android:layout_width="38dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="90dp"
                 android:background="@android:drawable/ic_input_add"
                 android:contentDescription="S1004"
                 android:onClick="Add_to_favourite"
                 app:layout_constraintStart_toEndOf="@+id/add3"
                 app:layout_constraintTop_toTopOf="@+id/add3" />
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="8dp"
+                android:text="Bts Butter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/S1003" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="Top Japanese version"
+                app:layout_constraintStart_toEndOf="@+id/textview"
+                app:layout_constraintTop_toTopOf="@+id/textview" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Come to Light"
+                app:layout_constraintStart_toEndOf="@+id/textview2"
+                app:layout_constraintTop_toTopOf="@+id/textview2" />
+
+            <TextView
+                android:id="@+id/textview5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="other songs"
+                app:layout_constraintStart_toEndOf="@+id/textview4"
+                app:layout_constraintTop_toTopOf="@+id/textview4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
@@ -139,16 +176,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="132dp"
-        android:text="recently played Song"
+        android:text="Recently played Song"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
         android:id="@+id/horizontal2"
-        android:layout_width="520dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="312dp"
+        android:layout_width="540dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="272dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +208,7 @@
                 app:srcCompat="@drawable/blackpink" />
 
             <ImageButton
-                android:id="@+id/S1006"
+                android:id="@+id/S1005"
                 android:layout_width="123dp"
                 android:layout_height="102dp"
                 android:layout_marginStart="24dp"
@@ -180,24 +218,47 @@
                 app:srcCompat="@drawable/photograph" />
 
             <ImageButton
-                android:id="@+id/S1007"
+                android:id="@+id/S1006"
                 android:layout_width="113dp"
                 android:layout_height="104dp"
                 android:layout_marginStart="20dp"
-                android:onClick="handleSelection"
-                app:layout_constraintStart_toEndOf="@id/S1006"
-                app:layout_constraintTop_toTopOf="@id/S1006"
+                app:layout_constraintStart_toEndOf="@id/S1005"
+                app:layout_constraintTop_toTopOf="@id/S1005"
                 app:srcCompat="@drawable/wonder_wall" />
 
-            <ImageButton
-                android:id="@+id/S1008"
-                android:layout_width="113dp"
-                android:layout_height="107dp"
-                android:layout_marginStart="16dp"
-                android:onClick="handleSelection"
-                app:layout_constraintStart_toEndOf="@id/S1007"
-                app:layout_constraintTop_toTopOf="@id/S1007"
-                app:srcCompat="@drawable/blackpink" />
+            <Button
+                android:id="@+id/add5"
+                android:layout_width="42dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1004"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toStartOf="@+id/S1004"
+                app:layout_constraintTop_toBottomOf="@+id/S1004" />
+
+            <Button
+                android:id="@+id/add6"
+                android:layout_width="42dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="104dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1005"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toEndOf="@+id/add5"
+                app:layout_constraintTop_toTopOf="@+id/add5" />
+
+            <Button
+                android:id="@+id/add7"
+                android:layout_width="42dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="104dp"
+                android:background="@android:drawable/ic_input_add"
+                android:contentDescription="S1006"
+                android:onClick="Add_to_favourite"
+                app:layout_constraintStart_toEndOf="@+id/add6"
+                app:layout_constraintTop_toTopOf="@+id/add6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
@@ -228,6 +289,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:text="JPOP"
+        app:iconTint="@color/teal_700"
         app:layout_constraintEnd_toStartOf="@+id/Category2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

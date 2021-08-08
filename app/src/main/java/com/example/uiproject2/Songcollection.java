@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Songcollection {
-    public Songcode songs[] = new Songcode[4];
+    public Songcode songs[] = new Songcode[5];
     //public Category_Swap Category[] = new Category_Swap[6];
 
     public Songcollection() {
@@ -33,22 +33,33 @@ public class Songcollection {
                 "https://p.scdn.co/mp3-preview/e99786dd73e91ef36ec7ff551352a63d5af0e80f?cid=2afe87a64b0042dabf51f37318616965",
                 0.30,
                 R.drawable.blackpink);
-
+        Songcode fifth_song = new Songcode("S1005",
+                "Bad Habits(5)",
+                "Ed Sheeran",
+                "https://p.scdn.co/mp3-preview/698a4ef43b27b9743ff085c4757bf64abba7b16e?cid=2afe87a64b0042dabf51f37318616965",
+                0.30,
+                R.drawable.photograph);
+        Songcode sixth_song = new Songcode("S1006",
+                "Heart Shaker(6)",
+                "Twice",
+                "https://p.scdn.co/mp3-preview/cfa22621ddcb28ccd6801cb7d074a9b517aa2844?cid=2afe87a64b0042dabf51f37318616965",
+                0.30,
+                R.drawable.wonder_wall);
 
         songs[0] = first_song;
         songs[1] = Second_song;
         songs[2] = thrid_song;
         songs[3] = forth_song;
+        songs[4] = fifth_song;
+
+
 
         //Category_Swap first_Category = new Category_Swap("Category1","Jpop");
         //Category_Swap Second_Category = new Category_Swap("Category2","Kpop");
         //Category_Swap Thrid_Category = new Category_Swap("Category3","Rock");
         //Category_Swap Forth_Category = new Category_Swap("Category4","Chinese");
 
-
     }
-
-
     public Songcode getCurrentSong(int currentSongId) {
 
         return songs[currentSongId];

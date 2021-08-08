@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/teal_700"
     tools:context=".PlaySongActivity2">
 
     <Button
@@ -113,7 +113,7 @@
         android:layout_marginTop="340dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/repeated_off"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/purple_700"
         android:onClick="RepeatSong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

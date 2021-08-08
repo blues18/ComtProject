@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#017F8F">
 
     <ImageView
         android:id="@+id/cover"
@@ -22,7 +23,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/cover"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,6 +36,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/cover"
         app:layout_constraintTop_toBottomOf="@+id/txtsong" />
